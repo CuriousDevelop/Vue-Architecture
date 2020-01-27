@@ -69,14 +69,6 @@
           <span>{{ $t('login.username') }} : editor </span>
           <span>{{ $t('login.password') }} : {{ $t('login.any') }} </span>
         </div>
-
-        <el-button
-          class="thirdparty-button"
-          type="primary"
-          @click="showDialog=true"
-        >
-          {{ $t('login.thirdparty') }}
-        </el-button>
       </div>
     </el-form>
 
@@ -101,13 +93,11 @@ import { Form as ElForm, Input } from 'element-ui'
 import { UserModule } from '@/store/modules/user'
 import { isValidUsername } from '@/utils/validate'
 import LangSelect from '@/components/LangSelect/index.vue'
-import SocialSign from './components/SocialSignin.vue'
 
 @Component({
   name: 'Login',
   components: {
-    LangSelect,
-    SocialSign
+    LangSelect
   }
 })
 export default class extends Vue {
@@ -141,8 +131,6 @@ export default class extends Vue {
 
   @Watch('$route', { immediate: true })
   private onRouteChange(route: Route) {
-    // TODO: remove the "as Dictionary<string>" hack after v4 release for vue-router
-    // See https://github.com/vuejs/vue-router/pull/2050 for details
     const query = route.query as Dictionary<string>
     if (query) {
       this.redirect = query.redirect
@@ -305,18 +293,6 @@ export default class extends Vue {
     color: $darkGray;
     cursor: pointer;
     user-select: none;
-  }
-
-  .thirdparty-button {
-    position: absolute;
-    right: 0;
-    bottom: 6px;
-  }
-
-  @media only screen and (max-width: 470px) {
-    .thirdparty-button {
-      display: none;
-    }
   }
 }
 </style>
