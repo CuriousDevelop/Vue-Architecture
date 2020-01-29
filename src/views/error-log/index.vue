@@ -22,13 +22,10 @@ import ErrorB from './components/ErrorTestB.vue'
   }
 })
 export default class extends Vue {
-constructor()
-{
-super()
-console.warn("Warnings Generated");
-
-}
-
+  constructor() {
+    super()
+    console.warn('Warnings Generated')
+  }
 }
 </script>
 

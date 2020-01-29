@@ -114,10 +114,10 @@ export const constantRoutes: RouteConfig[] = [
  * the routes that need to be dynamically loaded based on user roles
 */
 export const asyncRoutes: RouteConfig[] = [
-  
+
   /** when your routing map is too long, you can split it into small modules **/
   tableRouter,
-  //componentsRouter, // Uncomment to see other Available Components in Element UI
+  // componentsRouter, // Uncomment to see other Available Components in Element UI
   {
     path: '/example',
     component: Layout,
@@ -165,7 +165,7 @@ export const asyncRoutes: RouteConfig[] = [
     meta: {
       title: 'errorPages',
       icon: '404',
-      hidden : true
+      hidden: true
     },
     children: [
       {
@@ -175,7 +175,7 @@ export const asyncRoutes: RouteConfig[] = [
         meta: {
           title: 'page404',
           noCache: true,
-          hidden : true
+          hidden: true
         }
       }
     ]
