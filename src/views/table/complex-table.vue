@@ -111,8 +111,11 @@
       </el-table-column>
       <el-table-column
         :label="$t('table.date')"
+        prop="date"
         width="180px"
         align="center"
+        sortable="custom"
+        :class-name="getSortClass('date')"
       >
         <template slot-scope="scope">
           <span>{{ scope.row.timestamp | parseTime }}</span>
@@ -465,6 +468,9 @@ export default class extends Vue {
     if (prop === 'id') {
       this.sortByID(order)
     }
+    if (prop === 'date') {
+      this.sortByDate(order)
+    }
   }
 
   private sortByID(order: string) {
@@ -472,6 +478,15 @@ export default class extends Vue {
       this.listQuery.sort = '+id'
     } else {
       this.listQuery.sort = '-id'
+    }
+    this.handleFilter()
+  }
+
+  private sortByDate(order: string) {
+    if (order === 'ascending') {
+      this.listQuery.sort = '+date'
+    } else {
+      this.listQuery.sort = '-date'
     }
     this.handleFilter()
   }

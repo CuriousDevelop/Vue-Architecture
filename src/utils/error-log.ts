@@ -7,6 +7,8 @@ const { errorLog: needErrorLog } = settings
 
 const checkNeed = () => {
   const env = process.env.NODE_ENV
+  console.error(env);
+  (env)
   if (isArray(needErrorLog) && env) {
     return needErrorLog.includes(env)
   }

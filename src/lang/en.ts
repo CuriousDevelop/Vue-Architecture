@@ -27,7 +27,7 @@ export default {
     barChart: 'Bar Chart',
     lineChart: 'Line Chart',
     mixedChart: 'Mixed Chart',
-    example: 'Example',
+    example: 'Manage Article',
     nested: 'Nested Routes',
     menu1: 'Menu 1',
     'menu1-1': 'Menu 1-1',
@@ -36,11 +36,11 @@ export default {
     'menu1-2-2': 'Menu 1-2-2',
     'menu1-3': 'Menu 1-3',
     menu2: 'Menu 2',
-    table: 'Table',
+    table: 'Manage Blog',
     dynamicTable: 'Dynamic Table',
     draggableTable: 'Draggable Table',
     inlineEditTable: 'Inline Edit Table',
-    complexTable: 'Complex Table',
+    complexTable: 'Blogs',
     tab: 'Tab',
     form: 'Form',
     createArticle: 'Create Article',
@@ -134,12 +134,12 @@ export default {
     confirm: 'Confirm'
   },
   example: {
-    warning: 'Creating and editing pages cannot be cached by keep-alive because keep-alive\'s \'include\' currently does not support caching based on routes, so now it\'s cached based on component name. If you want to achieve a similar caching effect, you can use a browser caching scheme such as localStorage. Or don\'t use keep-alive\'s \'include\' to cache all pages directly. See details'
+    warning: 'Dummy Text From Language Resource'
   },
   errorLog: {
-    tips: 'Please click the bug icon in the upper right corner',
-    description: 'Now the management system are basically the form of the spa, it enhances the user experience, but it also increases the possibility of page problems, a small negligence may lead to the entire page deadlock. Fortunately Vue provides a way to catch handling exceptions, where you can handle errors or report exceptions.',
-    documentation: 'Document introduction'
+    tips: 'Error Generated',
+    description: 'Error Generated 1',
+    documentation: 'Error Generated 2'
   },
   excel: {
     export: 'Export',

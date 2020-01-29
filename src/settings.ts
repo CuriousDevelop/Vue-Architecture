@@ -14,10 +14,10 @@ interface ISettings {
 const settings: ISettings = {
   title: 'Vue Architecture',
   showSettings: true,
-  showTagsView: true,
-  fixedHeader: false,
-  showSidebarLogo: false,
-  errorLog: ['production'],
+  showTagsView: false,
+  fixedHeader: true,
+  showSidebarLogo: true,
+  errorLog: ['development'],
   sidebarTextTheme: true,
   devServerPort: 9527,
   mockServerPort: 9528
